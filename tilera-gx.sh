@@ -34,9 +34,9 @@ mkdir -p "${DESTDIR}"
 mkdir -p "${STAMPS}"
 
 PREFIX=""
-TARGET="tilepro-unknown-linux-gnu"
+TARGET="tilegx-unknown-linux-gnu"
 
-TILE_URL_TILEPRO=https://s3.tebi.io/tile/tilepro-x86_64.tar.bz2
+TILE_URL_TILEPRO=https://s3.tebi.io/tile/tilegx-x86_64.tar.bz2
 TILE_URL_BINUTILS=https://s3.tebi.io/tile/binutils-2.22.90.tar.bz2
 TILE_URL_LINUX_KERNEL=https://s3.tebi.io/tile/linux-3.2.32.tar.bz2
 TILE_URL_GLIBC=https://s3.tebi.io/tile/glibc-2.16.0.tar.xz
@@ -122,7 +122,7 @@ if [ ! -e ${STAMPS}/${LINUX_KERNEL}.headers ]; then
     log "Installing ${LINUX_KERNEL} headers..."
     rm -rf ${BUILD}/${LINUX_KERNEL} && mkdir -p ${BUILD}/${LINUX_KERNEL}
     cd ${UNPACKED}/${LINUX_KERNEL}
-    make headers_install ARCH=tilepro O=${BUILD}/${LINUX_KERNEL}
+    make headers_install ARCH=tilegx O=${BUILD}/${LINUX_KERNEL}
     mkdir -p ${DESTDIR}/tile/usr
     cp -r ${BUILD}/${LINUX_KERNEL}/usr/include ${DESTDIR}/tile/usr/
     mkdir -p ${DESTDIR}/lib/gcc/${TARGET}
@@ -180,7 +180,7 @@ if [ ! -e ${STAMPS}/${GLIBC}.build ]; then
 fi
 
 # Gdb
-# The target tilepro-unknown-linux-gnu is not yet supported
+# The target tilegx-unknown-linux-gnu is not yet supported
 #if [ ! -e ${STAMPS}/${GDB}.build ]; then
     #log "Building ${GDB}..."
     #rm -rf ${BUILD}/${GDB} && mkdir -p ${BUILD}/${GDB}
