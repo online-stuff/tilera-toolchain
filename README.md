@@ -1,5 +1,7 @@
 # tilera-toolchain
 
+This is a work-in-progress and I half-expect it not to work..  This is my 'scrachpad' for working on it when I get time and the desire.
+
 Cross ToolChains for tilera (tilepro and tilegx). This is a shell script that
 permit the building of cross toolchain for tilera.
 
