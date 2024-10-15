@@ -36,12 +36,12 @@ mkdir -p "${STAMPS}"
 PREFIX=""
 TARGET="tilepro-unknown-linux-gnu"
 
-TILE_URL_TILEPRO=https://link.storjshare.io/raw/jx7nj462x7d4exq4xkql65olaxca/tile-bucket/tilepro-x86_64.tar.bz2
-TILE_URL_BINUTILS=https://link.storjshare.io/raw/jxs4y6p5pzsf2fcrkxwoenhqiwaq/tile-bucket/binutils-2.22.90.tar.bz2
-TILE_URL_LINUX_KERNEL=https://link.storjshare.io/raw/jxn5ftsksctealrdwbnvacc3s4oa/tile-bucket/linux-3.2.32.tar.bz2
-TILE_URL_GLIBC=https://link.storjshare.io/raw/jwuiscyowtzlmnohbwqqyrbkgksq/tile-bucket/glibc-2.16.0.tar.xz
-TILE_URL_GCC=https://link.storjshare.io/raw/jvt56a6bogjsvguru5w3x4ol2zgq/tile-bucket/gcc-4.7.2.tar.bz2
-TILE_URL_GDB=https://link.storjshare.io/raw/ju5bplteyekzi572a3iu7hntiyma/tile-bucket/gdb-7.5.tar.bz2
+TILE_URL_TILEPRO=https://s3.tebi.io/tile/tilepro-x86_64.tar.bz2
+TILE_URL_BINUTILS=https://s3.tebi.io/tile/binutils-2.22.90.tar.bz2
+TILE_URL_LINUX_KERNEL=https://s3.tebi.io/tile/linux-3.2.32.tar.bz2
+TILE_URL_GLIBC=https://s3.tebi.io/tile/glibc-2.16.0.tar.xz
+TILE_URL_GCC=https://s3.tebi.io/tile/gcc-4.7.2.tar.bz2
+TILE_URL_GDB=https://s3.tebi.io/tile/gdb-7.5.tar.bz2
 
 # How many cpus there
 if [ "x${CPUS}" == "x" ]; then
